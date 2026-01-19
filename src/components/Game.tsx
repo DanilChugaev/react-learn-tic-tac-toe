@@ -1,13 +1,14 @@
 import Board from './Board.tsx';
 import {useState} from 'react';
 import type {TSquare} from '../types.ts';
-import GameHistory from './History.tsx';
+import GameHistory from './GameHistory.tsx';
 
 export default function Game() {
-  const [xIsNext, setXIsNext] = useState(true);
   const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMove, setCurrentMove] = useState(0);
 
-  const currentSquares: TSquare[] = history[history.length - 1];
+  const xIsNext = currentMove % 2 === 0
+  const currentSquares: TSquare[] = history[currentMove];
 
   const moves = history.map((_: TSquare[], move: number) => {
     let description = '';
@@ -26,12 +27,14 @@ export default function Game() {
   })
 
   function handlePlay(nextSquares: TSquare[]) {
-    setHistory([...history, nextSquares]);
-    setXIsNext(!xIsNext);
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
   }
 
   function jumpTo(nextMove: number) {
-
+    setCurrentMove(nextMove);
   }
 
   return (
