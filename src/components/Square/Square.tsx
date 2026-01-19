@@ -1,5 +1,5 @@
-import type {TSquare} from '../../types.ts';
-import './square.css'
+import type { TSquare } from '../../types.ts';
+import './square.css';
 
 export default function Square({
   value,
@@ -12,5 +12,5 @@ export default function Square({
     <button className="square" onClick={onSquareClick}>
       {value}
     </button>
-  )
+  );
 }

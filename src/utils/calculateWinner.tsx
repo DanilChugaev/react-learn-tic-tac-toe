@@ -1,4 +1,4 @@
-import type {TSquare} from '../types.ts';
+import type { TSquare } from '../types.ts';
 
 const lines = [
   [0, 1, 2],
@@ -8,7 +8,7 @@ const lines = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 export function calculateWinner(squares: TSquare[]) {

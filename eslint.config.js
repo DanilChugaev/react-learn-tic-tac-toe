@@ -19,5 +19,12 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      'linebreak-style': ['error', 'unix'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'always'],
+      'comma-dangle': ['error', 'always-multiline'],
+      "object-curly-spacing": ["error", "always"]
+    }
   },
 ])

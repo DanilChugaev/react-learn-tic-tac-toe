@@ -1,4 +1,4 @@
-import './gameHistory.css'
+import './gameHistory.css';
 
 export default function GameHistory({ moves }: { moves: React.ReactNode[] } ) {
   return (
@@ -7,5 +7,5 @@ export default function GameHistory({ moves }: { moves: React.ReactNode[] } ) {
 
       <ol className="game-history-list">{moves}</ol>
     </div>
-  )
+  );
 }

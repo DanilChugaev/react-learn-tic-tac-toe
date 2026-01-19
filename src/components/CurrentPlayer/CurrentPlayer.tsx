@@ -1,4 +1,4 @@
-import './currentPlayer.css'
+import './currentPlayer.css';
 
 export function CurrentPlayer({ position }: { position: string }) {
   const player = position === 'left' ? 'X' : 'O';

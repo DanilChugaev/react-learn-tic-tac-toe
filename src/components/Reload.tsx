@@ -3,5 +3,5 @@ export function Reload() {
     window.location.reload();
   }
 
-  return <button className="reload" onClick={handleClick}>Reload</button>
+  return <button className="reload" onClick={handleClick}>Reload</button>;
 }

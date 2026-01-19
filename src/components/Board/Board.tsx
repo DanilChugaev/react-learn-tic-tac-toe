@@ -1,9 +1,9 @@
 import Square from '../Square/Square.tsx';
-import {calculateWinner} from '../../utils/calculateWinner.tsx';
-import {CurrentPlayer} from '../CurrentPlayer/CurrentPlayer.tsx';
-import {Reload} from '../Reload.tsx';
-import type {TSquare} from '../../types.ts';
-import './board.css'
+import { calculateWinner } from '../../utils/calculateWinner.tsx';
+import { CurrentPlayer } from '../CurrentPlayer/CurrentPlayer.tsx';
+import { Reload } from '../Reload.tsx';
+import type { TSquare } from '../../types.ts';
+import './board.css';
 
 export default function Board({
   xIsNext,
@@ -29,7 +29,7 @@ export default function Board({
 
     const nextSquares = squares.slice();
 
-    nextSquares[i] = xIsNext ? "X" : "O";
+    nextSquares[i] = xIsNext ? 'X' : 'O';
 
     onPlay(nextSquares);
   }
