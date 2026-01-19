@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+.game,
 .board-container {
   position: relative;
   display: flex;
@@ -49,6 +50,19 @@
 
 .status {
   font-size: 30px;
+}
+
+.game-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.w-full {
+  width: 100%;
 }
 
 @media (max-width: 399px) {

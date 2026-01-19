@@ -1,24 +1,18 @@
 import Square from './Square.tsx';
-import {useState} from 'react';
 import {calculateWinner} from '../utils/calculateWinner.tsx';
 import {CurrentPlayer} from './CurrentPlayer.tsx';
 import {Reload} from './Reload.tsx';
+import type {TSquare} from '../types.ts';
 
-export default function Board() {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
-
-  function handleClick(i: number) {
-    if (squares[i] || calculateWinner(squares)) return;
-
-    const nextSquares = squares.slice();
-
-    nextSquares[i] = xIsNext ? "X" : "O";
-
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
-  }
-
+export default function Board({
+  xIsNext,
+  squares,
+  onPlay,
+}: {
+  xIsNext: boolean;
+  squares: TSquare[];
+  onPlay: (nextSquares: TSquare[]) => void;
+}) {
   const winner = calculateWinner(squares);
 
   let status;
@@ -27,6 +21,16 @@ export default function Board() {
     status = 'Winner: ' + winner;
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  }
+
+  function handleClick(i: number) {
+    if (squares[i] || calculateWinner(squares)) return;
+
+    const nextSquares = squares.slice();
+
+    nextSquares[i] = xIsNext ? "X" : "O";
+
+    onPlay(nextSquares);
   }
 
   return (

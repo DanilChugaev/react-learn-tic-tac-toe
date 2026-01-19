@@ -1,8 +1,10 @@
+import type {TSquare} from '../types.ts';
+
 export default function Square({
   value,
   onSquareClick,
 }: {
-  value: number;
+  value: TSquare;
   onSquareClick: () => void;
 }) {
   return (
