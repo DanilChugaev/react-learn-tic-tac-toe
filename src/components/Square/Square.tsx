@@ -1,4 +1,5 @@
-import type {TSquare} from '../types.ts';
+import type {TSquare} from '../../types.ts';
+import './square.css'
 
 export default function Square({
   value,

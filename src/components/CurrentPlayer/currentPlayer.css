@@ -1,0 +1,20 @@
+.current-player {
+    position: absolute;
+    font-size: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.current-player--left {
+    left: -80px;
+}
+
+.current-player--right {
+    right: -80px;
+}
+
+@media (max-width: 399px) {
+    .current-player {
+        display: none;
+    }
+}

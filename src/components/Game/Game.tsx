@@ -1,7 +1,8 @@
-import Board from './Board.tsx';
+import Board from '../Board/Board.tsx';
 import {useState} from 'react';
-import type {TSquare} from '../types.ts';
-import GameHistory from './GameHistory.tsx';
+import type {TSquare} from '../../types.ts';
+import GameHistory from '../GameHistory/GameHistory.tsx';
+import './game.css'
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);

@@ -1,3 +1,5 @@
+import './gameHistory.css'
+
 export default function GameHistory({ moves }: { moves: React.ReactNode[] } ) {
   return (
     <div className="game-history">

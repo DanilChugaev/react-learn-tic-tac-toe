@@ -1,8 +1,9 @@
-import Square from './Square.tsx';
-import {calculateWinner} from '../utils/calculateWinner.tsx';
-import {CurrentPlayer} from './CurrentPlayer.tsx';
-import {Reload} from './Reload.tsx';
-import type {TSquare} from '../types.ts';
+import Square from '../Square/Square.tsx';
+import {calculateWinner} from '../../utils/calculateWinner.tsx';
+import {CurrentPlayer} from '../CurrentPlayer/CurrentPlayer.tsx';
+import {Reload} from '../Reload.tsx';
+import type {TSquare} from '../../types.ts';
+import './board.css'
 
 export default function Board({
   xIsNext,

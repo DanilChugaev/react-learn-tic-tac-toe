@@ -1,0 +1,21 @@
+.board-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.board-row {
+    display: flex;
+    gap: 2px;
+}
+
+.status {
+    font-size: 30px;
+}
