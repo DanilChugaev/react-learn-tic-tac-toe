@@ -1,0 +1,17 @@
+.modal-dialog {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-dialog-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 10px;
+}
+
+.modal-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}

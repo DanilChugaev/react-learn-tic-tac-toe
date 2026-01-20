@@ -1,11 +1,29 @@
+import { type ReactNode, useState } from 'react';
 import './gameHistory.css';
+import ModalDialog from '../ModalDialog/ModalDialog.tsx';
 
-export default function GameHistory({ moves }: { moves: React.ReactNode[] } ) {
+export default function GameHistory({ moves }: { moves: ReactNode[] } ) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleOpenDialog() {
+    setIsOpen(true);
+  }
+
+  function handleCloseDialog() {
+    setIsOpen(false);
+  }
+
   return (
-    <div className="game-history">
-      <span>History</span>
+    <>
+      <button onClick={handleOpenDialog}>Open History</button>
 
-      <ol className="game-history-list">{moves}</ol>
-    </div>
+      <ModalDialog isOpen={isOpen} onClose={handleCloseDialog}>
+        <div className="game-history">
+          <span>History</span>
+
+          <ol className="game-history-list">{moves}</ol>
+        </div>
+      </ModalDialog>
+    </>
   );
 }
